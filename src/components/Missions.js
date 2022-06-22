@@ -1,11 +1,14 @@
 import React from 'react';
+import Title from './Title';
 import missions from '../data/missions';
 import MissionCard from './MissionCard';
 
 class Missions extends React.Component {
   render() {
     return (
-      <>
+      <div>
+        <Title headline="Missões" />
+        <div data-testid="missions" />
         {
           missions.map((mission) => (
             <MissionCard
@@ -17,7 +20,7 @@ class Missions extends React.Component {
             />
           ))
         }
-      </>
+      </div>
     );
   }
 }
